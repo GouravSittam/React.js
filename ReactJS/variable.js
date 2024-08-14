@@ -28,3 +28,23 @@ function b(){
 
  }
 b();
+
+//let 
+//scope declaration
+let globalLet="it is global";
+console.log(globalLet);
+//local declaration in let scope
+function abc(){
+    let localLet = "i am local";
+    console.log(localLet)
+}
+abc();
+
+//redeclaration by let
+function redecByLet(){
+    let z=30;
+    //let z=3; //redeclaration is not allowed in let scope
+    console.log(a);
+
+}
+redecByLet();
