@@ -59,12 +59,36 @@ function reassignByLet(){
  }
  reassignByLet();
 
- //hoisting by let
- function hoistBy(){
-    console.log("before dec: ",aa);
-    let aa=33;
-    console.log("after decl:",aa);//hoisting is not allowed in let scope
- }
- hoistBy();
+//  //hoisting by let
+//  function hoistBy(){
+//     console.log("before dec: ",aa);
+//     let aa=33;
+//     console.log("after decl:",aa);//hoisting is not allowed in let scope
+//  }
+//  hoistBy();
 
- 
+
+//const Declaration by const
+function abcd(){
+    let localLet = "i am local";
+    console.log(localLet)
+}
+abcd();
+
+//local decleration
+function ab(){
+    const a="i am local agian";
+    console.log(ab);
+}
+ab();
+
+// //redeclartaion by const
+
+// function G(){
+//     const b=120;
+//     const b=23;
+//     console.log(b);//redeclaration is not allowed in let scope
+
+
+// }
+// G();
