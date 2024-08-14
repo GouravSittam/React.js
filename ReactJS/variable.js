@@ -48,3 +48,23 @@ function redecByLet(){
 
 }
 redecByLet();
+
+//reassignment by let
+
+function reassignByLet(){
+    let xx = 300;
+    xx = 30;
+    //reassignment is not allowed in let scope
+
+ }
+ reassignByLet();
+
+ //hoisting by let
+ function hoistBy(){
+    console.log("before dec: ",aa);
+    let aa=33;
+    console.log("after decl:",aa);//hoisting is not allowed in let scope
+ }
+ hoistBy();
+
+ 
