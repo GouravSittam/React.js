@@ -18,3 +18,13 @@ function a(){
 
 }
 a()
+
+//reassignment in Var
+function b(){
+    var p = 45;
+    p = 3;
+    console.log(p);
+    //reassignment is allowed  in var
+
+ }
+b();
