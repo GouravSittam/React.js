@@ -92,3 +92,12 @@ ab();
 
 // }
 // G();
+
+//reassignment by const
+function reassignByConst(){
+    const a = 30;
+    a = 23;
+    console.log("after reassignment:",a)
+
+  }
+  reassignByConst()
