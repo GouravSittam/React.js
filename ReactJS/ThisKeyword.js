@@ -4,11 +4,21 @@
 console.log(this)
 
 //This key within the function
-function add(){
-    console.log(this)
-}
-add();
+// function a(){
+//     console.log(this)
+// }
+// a();
 
-//in strict mode this keyword will be undefined
-//non delete keyword,read only
+// //in strict mode this keyword will be undefined
+// //non delete keyword,read only
+// a();
+// window.a();
 
+
+const obj={
+    y:5,
+    x:function(){// x is method when creating a function inside a object
+        console.log(this)
+    },
+};
+obj.x();
