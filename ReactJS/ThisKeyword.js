@@ -22,3 +22,16 @@ const obj={
     },
 };
 obj.x();
+
+const sutd={
+    name:"abhinash",
+    printName:function(){
+        console.log(this);
+    },
+};
+sutd.printName();
+
+const stud2={
+    name:"avinash",
+};
+sutd.printName.call(stud2)
