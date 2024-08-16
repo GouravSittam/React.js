@@ -1,4 +1,5 @@
-
+// "use strict";
+//globally scoped to a module or file scope
 //window object in browser
 console.log(this)
 
