@@ -35,3 +35,7 @@ const stud2={
     name:"avinash",
 };
 sutd.printName.call(stud2)
+sutd.printName.apply(stud2)
+
+//bind to create new function with this set for student 2
+const printNameForStud2=sutd.printName.bind(stud2);// bind is a method of the function object,which creates a new function and sets its this value as specified by the arguments passed in to it when called.   
