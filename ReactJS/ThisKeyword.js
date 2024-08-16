@@ -1,3 +1,5 @@
+
+//window object in browser
 console.log(this)
 
 //This key within the function
