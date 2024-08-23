@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modules</title>
+  </head>
+  <body>
+    <p id="result"></p>
+    <!-- import js module -->
+    <script type="module">
+      import { add, sub } from "./math.js";
+      const a = 23;
+      const b = 34;
+      //perform the operation
+      const result = `add: ${a} + ${b} = ${add(
+        a,
+        b
+      )} | sub: ${a} - ${b} = ${sub(a, b)}`;
+      //print the result in the html page
+      document.getElementById("result").textContent = result;
+    </script>
+  </body>
+</html>
