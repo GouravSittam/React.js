@@ -1,17 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import Greeting from './Greeting';
+import Counter from './Counter';
 
 function App() {
-  const handleClick = () => {
-    alert('btn is clicked');
-  };
   return (
     <div>
-      <h1>Hello React!</h1>
-      <button onClick={handleClick}>Click btn</button>
+      <Greeting message="Hello, Gourav! Welcome to the React App!" />
+      <Counter />
     </div>
   );
 }
-
 
 export default App;
