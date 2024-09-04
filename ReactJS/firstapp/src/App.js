@@ -1,4 +1,4 @@
-// import "./App.css";
+import "./App.css";
 
 const App = () => {
   return (
@@ -23,11 +23,17 @@ const App = () => {
       </header>
       <main>
         <h1>Welcome to my Website</h1>
-        <p>this is simple react page</p>
+        <p>
+          React is a free and open-source front-end JavaScript library for
+          building user interfaces based on components by Facebook Inc. It is
+          maintained by Meta and a community of individual developers and
+          companies. React can be used to develop single-page, mobile, or
+          server-rendered applications with frameworks like Next.js
+        </p>
       </main>
 
       <footer>
-        <p>&copy; 2020 ReactJS</p>
+        <p>&copy; 2024 ReactJS</p>
       </footer>
     </div>
   );
