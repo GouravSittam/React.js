@@ -10,6 +10,7 @@ class Form2 extends Component {
       feedbackType: '',
       comments: '',
       suggestions: '',
+      rating: '',
       errors: {},
       submitted: false,
     };
@@ -48,6 +49,12 @@ class Form2 extends Component {
     if (!this.state.feedbackType) {
       formIsValid = false;
       errors["feedbackType"] = "Feedback type is required";
+    }
+
+    // Rating validation
+    if (!this.state.rating) {
+      formIsValid = false;
+      errors["rating"] = "Rating is required";
     }
 
     this.setState({ errors });
@@ -103,14 +110,57 @@ class Form2 extends Component {
           </div>
           <div>
             <label htmlFor="feedbackType">Feedback Type</label>
-            <input
-              type="text"
-              name="feedbackType"
-              id="feedbackType"
-              value={this.state.feedbackType}
-              onChange={this.handleChange}
-            />
+            <div>
+              <input
+                type="radio"
+                name="feedbackType"
+                id="positive"
+                value="Positive"
+                checked={this.state.feedbackType === 'Positive'}
+                onChange={this.handleChange}
+              />
+              <label htmlFor="positive">Positive</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="feedbackType"
+                id="neutral"
+                value="Neutral"
+                checked={this.state.feedbackType === 'Neutral'}
+                onChange={this.handleChange}
+              />
+              <label htmlFor="neutral">Neutral</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="feedbackType"
+                id="negative"
+                value="Negative"
+                checked={this.state.feedbackType === 'Negative'}
+                onChange={this.handleChange}
+              />
+              <label htmlFor="negative">Negative</label>
+            </div>
             {this.state.errors.feedbackType && <p>{this.state.errors.feedbackType}</p>}
+          </div>
+          <div>
+            <label htmlFor="rating">Rating</label>
+            <select
+              name="rating"
+              id="rating"
+              value={this.state.rating}
+              onChange={this.handleChange}
+            >
+              <option value="">Select Rating</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            {this.state.errors.rating && <p>{this.state.errors.rating}</p>}
           </div>
           <div>
             <label htmlFor="comments">Comments</label>
